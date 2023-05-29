@@ -1,0 +1,36 @@
+.branches {
+  padding: 0 96px;
+}
+
+.branches__container {
+  margin: 0 auto;
+  max-width: 1248px;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+}
+
+.branches__top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.branches__title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.branches__button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 14px 16px;
+}
+
+.branches__button:hover {
+  background: #ec8d1e;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}

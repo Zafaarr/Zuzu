@@ -1,0 +1,36 @@
+.banner {
+  margin: 0 auto;
+  padding: 40px 96px;
+}
+
+.banner__container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1248px;
+}
+
+.banner__container .banner__img {
+  position: relative;
+  z-index: 1;
+  width: 1160px;
+}
+
+.banner__left {
+  cursor: pointer;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: -2.2%;
+  width: 48px;
+  height: 48px;
+}
+
+.banner__right {
+  cursor: pointer;
+  z-index: 3;
+  right: -2.2%;
+  top: 50%;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+}

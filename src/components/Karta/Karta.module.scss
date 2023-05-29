@@ -1,0 +1,40 @@
+.karta__container {
+  // border: 1px solid black;
+  position: relative;
+}
+
+.karta {
+  z-index: 1;
+}
+
+.karta__buttons {
+  z-index: 2;
+  position: absolute;
+  top: 8%;
+  right: 8%;
+  display: flex;
+  gap: 16px;
+}
+
+.karta__button {
+  background: #f5f5f5;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 14px 46px;
+  border-radius: 100px;
+  color: black;
+}
+
+.karta__button:hover {
+  background: #ec8d1e;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+}
+
+.active {
+  background: #ec8d1e;
+  color: #fff;
+}

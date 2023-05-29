@@ -1,0 +1,67 @@
+.branch {
+  padding: 40px 501px 76px 96px;
+}
+
+.branch__container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 843px;
+  min-height: 981px;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.branch__title {
+  border-bottom: 0.5px solid #b8b0b0;
+  width: 100%;
+}
+
+.branch__title .branch__name {
+  padding: 16px 0 16px 24px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  border-bottom: 1px solid #b8b0b0;
+}
+
+.branch__info1 {
+  padding: 32px 40px 12px 24px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #292929;
+}
+
+.branch__info2 {
+  padding: 0 40px 32px 24px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #292929;
+}
+
+.branch__container img {
+  padding: 0 24px 32px 24px;
+}
+
+.branch__location {
+  padding: 0 0 32px 24px;
+  
+}
+
+.branch__location p {
+  margin-top: 12px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #808080;
+  & span {
+    margin-left: 12px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #292929;
+  }
+}

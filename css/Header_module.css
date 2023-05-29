@@ -1,0 +1,45 @@
+.header {
+  background-color: #fff;
+  width: 100%;
+  min-height: 72px;
+  padding: 12px 96px;
+}
+
+.header__container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1248px;
+}
+
+.headerBar {
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.headerLogo {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.header__login {
+  margin-left: 41px;
+  cursor: pointer;
+}
+
+.header__right {
+  display: flex;
+  gap: 24px;
+}
+
+.header__korzina {
+  cursor: pointer;
+}
+
+.header__language {
+  cursor: pointer;
+}
+
+.header__profil {
+  cursor: pointer;
+}

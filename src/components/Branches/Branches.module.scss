@@ -1,0 +1,132 @@
+.branches {
+  padding: 40px 96px 76px 96px;
+}
+
+.branches__container {
+  margin: 0 auto;
+  max-width: 1248px;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  // min-height: 586px;
+  border-radius: 12px;
+}
+
+.branches__top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #f8f8f8;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 24px;
+  gap: 10px;
+  height: 80px;
+}
+
+.branches__title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.branches__buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.branches__button {
+  background: #f5f5f5;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 14px 46px;
+  border-radius: 100px;
+  color: black;
+}
+
+.branches__button:hover {
+  background: #ec8d1e;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+}
+
+.active {
+  background: #ec8d1e;
+  color: #fff;
+}
+
+.branches__cards {
+  flex-wrap: wrap;
+  gap: 16px;
+  display: flex;
+  padding: 24px;
+}
+
+.branches__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 16px;
+  width: 359px;
+  min-height: 217px;
+  background: #f8f8f8;
+  box-shadow: 4px 0px 12px rgba(24, 21, 17, 0.04);
+  border-radius: 18px;
+  color: #292929;
+}
+
+.branches__location {
+  position: relative;
+  align-items: center;
+  width: 341.33px;
+  height: 69px;
+}
+
+.branch__name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vector1 {
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.vector2 {
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.branch__name p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.branch__address {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eaeaea;
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #808080;
+}
+
+.branch__hours p {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #808080;
+}
+
+.branch__hours h2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}

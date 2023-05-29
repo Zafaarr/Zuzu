@@ -1,0 +1,30 @@
+.categories {
+  padding: 0 96px 56px 96px;
+}
+
+.categories__container {
+  margin: 0 auto;
+  display: flex;
+  max-width: 1248px;
+  gap: 20px;
+}
+
+.catagory {
+  background-color: #fff;
+  padding: 14px 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.catagory:active {
+  background-color: #ec8d1e;
+  color: #fff;
+}
+
+.catagory:hover {
+  background-color: #ec8d1e;
+  color: #fff;
+}
