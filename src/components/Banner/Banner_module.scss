@@ -1,6 +1,12 @@
 .banner {
   margin: 0 auto;
   padding: 40px 96px;
+  @media (max-width: 767px) {
+    padding: 40px 50px;
+  }
+  @media (max-width: 500px) {
+    padding: 25px 16px;
+  }
 }
 
 .SwiperSlide {
@@ -17,7 +23,8 @@
 .banner__container .banner__img {
   position: relative;
   z-index: 1;
-  width: 1160px;
+  object-fit: cover;
+  width: 100%;
 }
 
 .banner__left {

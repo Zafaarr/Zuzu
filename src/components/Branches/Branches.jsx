@@ -1,13 +1,25 @@
 import style from "./Branches.module.scss";
 import vector from "../imgs/Vector.png";
 import { Link, NavLink } from "react-router-dom";
-import branches from "../mock/branches";
+import axios from "axios";
+import { useEffect, useState } from "react";
+
+const baseURL = "https://64787ea6362560649a2de4b0.mockapi.io/zuzu/branches";
 
 export function Branches() {
   const linkClass = ({ isActive }) =>
     isActive
       ? `${style.branches__button} ${style.active}`
       : style.branches__button;
+
+  const [dataBranch, setDataBranch] = useState([]);
+  useEffect(() => {
+    axios
+      .get(baseURL)
+      .then((response) => setDataBranch(response.data))
+      .catch((error) => console.log("error", error));
+  }, []);
+
   return (
     <div className={style.branches}>
       <div className={style.branches__container}>
@@ -23,79 +35,23 @@ export function Branches() {
           </div>
         </div>
         <div className={style.branches__cards}>
-          <Link to="/branches/:id" className={style.branches__card}>
-            <div className={style.branches__location}>
-              <div className={style.branch__name}>
-                <p>Зузу пицца Magic city</p>
-                <img className={style.vector1} src={vector} alt="vector" />
+          {dataBranch.map((branch) => (
+            <Link to="/branches/:id" className={style.branches__card}>
+              <div className={style.branches__location}>
+                <div className={style.branch__name}>
+                  <p>{branch.name}</p>
+                  <img className={style.vector1} src={vector} alt="vector" />
+                </div>
+                <div className={style.branch__address}>
+                  {branch.description}
+                </div>
               </div>
-              <div className={style.branch__address}>
-                Magic City,ул. Бабура, 174, Ташкент, Узбекистан
+              <div className={style.branch__hours}>
+                <p>Часы работы</p>
+                <h2>Ежедневно: {branch.from_time}-{branch.to_time}</h2>
               </div>
-            </div>
-            <div className={style.branch__hours}>
-              <p>Часы работы</p>
-              <h2>Ежедневно: 10:00-03:00</h2>
-            </div>
-          </Link>
-          <Link to="/branches/:id" className={style.branches__card}>
-            <div className={style.branches__location}>
-              <div className={style.branch__name}>
-                <p>Зузу пицца Универсам</p>
-                <img className={style.vector2} src={vector} alt="vector" />
-              </div>
-              <div className={style.branch__address}>Махалля Акбаробод </div>
-            </div>
-            <div className={style.branch__hours}>
-              <p>Часы работы</p>
-              <h2>Ежедневно: 10:00-03:00</h2>
-            </div>
-          </Link>
-          <Link to="/branches/:id" className={style.branches__card}>
-            <div className={style.branches__location}>
-              <div className={style.branch__name}>
-                <p>Зузу пицца Parkent</p>
-                <img className={style.vector1} src={vector} alt="vector" />
-              </div>
-              <div className={style.branch__address}>
-                Magic City,ул. Бабура, 174, Ташкент, Узбекистан
-              </div>
-            </div>
-            <div className={style.branch__hours}>
-              <p>Часы работы</p>
-              <h2>Ежедневно: 10:00-03:00</h2>
-            </div>
-          </Link>
-          <Link to="/branches/:id" className={style.branches__card}>
-            <div className={style.branches__location}>
-              <div className={style.branch__name}>
-                <p>Зузу пицца Мукумий</p>
-                <img className={style.vector1} src={vector} alt="vector" />
-              </div>
-              <div className={style.branch__address}>
-                Универсам, Окилота 11, Ташкент, Узбекистан
-              </div>
-            </div>
-            <div className={style.branch__hours}>
-              <p>Часы работы</p>
-              <h2>Ежедневно: 10:00-03:00</h2>
-            </div>
-          </Link>
-          <Link to="/branches/:id" className={style.branches__card}>
-            <div className={style.branches__location}>
-              <div className={style.branch__name}>
-                <p>Зузу пицца Сергели</p>
-                <img className={style.vector2} src={vector} alt="vector" />
-              </div>
-              <div className={style.branch__address}>
-                Массив Сергели-VIIIА, 11{" "}
-              </div>
-            </div>
-            <div className={style.branch__hours}>
-              <p>Часы работы</p>
-              <h2>Ежедневно: 10:00-03:00</h2>
-            </div>
-          </Link>
+            </Link>
+          ))}
           {/* {branches.map((v, i, a) => (
             <Link to={v.id} className="branches__card">
               <div className="branches__location">

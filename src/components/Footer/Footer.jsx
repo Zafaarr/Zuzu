@@ -33,10 +33,13 @@ export function Footer() {
               </NavLink>
             </li>
           </ul>
+          <div className="sdegrgrg">
+            <div></div>
+          </div>
         </div>
         <div className={style.footer__center}></div>
         <div className={style.footer__bottom}>
-          <p>©Zuzu 2005 - 2021 All rights reserved</p> 
+          <p>©Zuzu 2005 - 2021 All rights reserved</p>
           <div className={style.footer__icons}>
             <Link to="https://www.instagram.com/zuzupizzauz/">
               <img src={instagram} alt="instagram" />

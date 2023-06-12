@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "./Categories_module.scss";
 
 export function Categories() {
@@ -11,7 +10,7 @@ export function Categories() {
           Салаты
         </div>
         <div className="catagory">Напитки</div>
-        <div className="catagory">Синнамон роллы</div>
+        <div className="catagory1">Синнамон роллы</div>
         <div className="catagory">Гарниры</div>
         <div className="catagory">Соусы</div>
       </div>

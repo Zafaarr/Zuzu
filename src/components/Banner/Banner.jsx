@@ -1,7 +1,5 @@
 import "./Banner_module.scss";
 import banner from "../imgs/Banner.png";
-// import left from "../imgs/LeftIcon.png";
-// import right from "../imgs/RightIcon.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -14,7 +12,7 @@ export function Banner() {
         navigation={true}
         modules={[Navigation]}
         className="banner__container"
-        // style={{ color: "black" }}
+        style={{ color: "black" }}
       >
         <SwiperSlide>
           <img className="banner__img" src={banner} alt="banner" />

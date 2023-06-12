@@ -8,7 +8,7 @@
 
 .order__item {
   display: flex;
-  gap: 78px;
+  gap: 115px;
   background: #ffffff;
   // border: 1px solid black;
   & .itemCount {
@@ -17,7 +17,8 @@
     font-size: 20px;
     line-height: 38px;
     color: #292929;
-    width: 126px;
+    max-width: 100px;
+    // min-height: 20px;
     // border: 1px solid black;
   }
   & .itemPrice {
@@ -27,7 +28,7 @@
     font-size: 20px;
     line-height: 38px;
     color: #292929;
-    width: 120px;
+    // width: 120px;
   }
 }
 
@@ -36,8 +37,11 @@
   font-size: 20px;
   line-height: 20px;
   color: #292929;
+  display: flex;
+  justify-content: space-between;
+  min-height: 20px;
   & span {
-    margin-left: 176px;
+    // margin-left: 176px;
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;
@@ -47,17 +51,18 @@
 
 .total {
   display: flex;
+  justify-content: space-between;
   margin-top: 7px;
   font-weight: 600;
   font-size: 24px;
   line-height: 24px;
   color: #292929;
+  flex-grow: 1;
   & div {
     display: flex;
     flex-direction: row-reverse;
     width: 150px;
-    margin-top: 5px;
-    margin-left: 101px;
+    margin-top: 3px;
     font-weight: 500;
     font-size: 24px;
     line-height: 20px;

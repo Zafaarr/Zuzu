@@ -1,5 +1,17 @@
 .branch {
   padding: 40px 501px 76px 96px;
+  @media (max-width: 1330px) {
+    padding: 40px 300px 76px 96px;
+  }
+  @media (max-width: 1110px) {
+    padding: 40px 96px 76px 96px;
+  }
+  @media (max-width: 767px) {
+    padding: 40px 50px 76px 50px;
+  }
+  @media (max-width: 430px) {
+    padding: 16px 16px 200px 16px;
+  }
 }
 
 .branch__container {
@@ -7,10 +19,13 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 843px;
+  max-width: 843px;
   min-height: 981px;
   border-radius: 12px;
   background: #ffffff;
+  @media (max-width: 560px) {
+    min-height: 700px;
+  }
 }
 
 .branch__title {
@@ -24,6 +39,11 @@
   font-size: 32px;
   line-height: 40px;
   border-bottom: 1px solid #b8b0b0;
+  @media (max-width: 560px) {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .branch__info1 {
@@ -32,6 +52,12 @@
   font-size: 20px;
   line-height: 28px;
   color: #292929;
+  @media (max-width: 560px) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 16px;
+  }
 }
 
 .branch__info2 {
@@ -40,15 +66,23 @@
   font-size: 20px;
   line-height: 28px;
   color: #292929;
+  @media (max-width: 560px) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 16px;
+  }
 }
 
 .branch__container img {
   padding: 0 24px 32px 24px;
+  width: 100%;
 }
 
 .branch__location {
   padding: 0 0 32px 24px;
-  
+  // display: flex;
+  // justify-content: space-between;
 }
 
 .branch__location p {
@@ -57,11 +91,23 @@
   font-size: 20px;
   line-height: 24px;
   color: #808080;
-  & span {
+  display: flex;
+  @media (max-width: 560px) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  & div {
     margin-left: 12px;
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
     color: #292929;
+    display: flex;
+    @media (max-width: 560px) {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 }

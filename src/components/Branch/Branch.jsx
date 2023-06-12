@@ -7,8 +7,8 @@ export function Branch() {
   const { id } = useParams();
 
   const branchData = branches.find((v) => v.id == id);
-  console.log(branchData);
-  console.log(branches);
+  // console.log(branchData);
+  // console.log(branches);
 
   return (
     <div className={style.branch}>
@@ -34,13 +34,13 @@ export function Branch() {
         <img src={branch} alt="branch" />
         <div className={style.branch__location}>
           <p>
-            Адрес: <span>Magic City,ул. Бабура, 174, Ташкент, Узбекистан</span>
+            Адрес: <div>Magic City,ул. Бабура, 174, Ташкент, Узбекистан</div>
           </p>
           <p>
-            Часы работы: <span>10:00-03:00</span>
+            Часы работы: <div>10:00-03:00</div>
           </p>
           <p>
-            Номер телефона: <span>+998 71 200 77 77</span>
+            Номер телефона: <div>+998 71 200 77 77</div>
           </p>
         </div>
       </div>

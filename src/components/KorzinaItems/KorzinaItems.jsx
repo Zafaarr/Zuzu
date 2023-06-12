@@ -27,13 +27,17 @@ export function KorzinaItems() {
       {zuzuFromRedux.map((item) => (
         <div key={item.idi} className="korzinaItems">
           <div className="korzinaItems__container">
-            <img src={item.img} alt="abc" className="korzina__img" />
             <div className="zakaz__item">
-              <div className="zakaz__name">{item.name}</div>
-              <div className="zakaz__surname">Средняя, Воздушное</div>
+              <img src={item.image} alt="abc" className="korzina__img" />
+              <div>
+                <div className="zakaz__name">{item.title}</div>
+                <div className="zakaz__surname">{item.description}</div>
+              </div>
             </div>
             <div className="zakaz__count">
-              <div className="zakaz_price">{item.price}</div>
+              <div className="zakaz_price">
+                {item.price} сум
+              </div>
               <div onClick={() => decrease(item.idi)} className="zakaz__minus">
                 -
               </div>

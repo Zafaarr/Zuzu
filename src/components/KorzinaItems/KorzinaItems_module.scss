@@ -1,15 +1,13 @@
 .korzinaItems {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  padding: 8px 0px;
   gap: 90px;
+  min-height: 89px;
   width: 100%;
-  height: 89px;
   background: #ffffff;
   box-shadow: inset 0px -1px 0px rgba(196, 196, 196, 0.16);
   padding: 16px 24px;
+  border-radius: 12px;
 }
 
 .korzina__img {
@@ -19,13 +17,19 @@
 }
 
 .korzinaItems__container {
+  // border: 1px solid black;
   display: flex;
   align-items: center;
-  gap: 230px;
+  justify-content: space-between;
+  flex-grow: 1;
 }
 
 .zakaz__item {
-  margin-left: -210px;
+  // margin-left: -210px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 60%;
 }
 
 .zakaz__name {
@@ -33,6 +37,11 @@
   font-size: 20px;
   line-height: 24px;
   color: #292929;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .zakaz__surname {
@@ -47,8 +56,6 @@
 .zakaz__count {
   display: flex;
   align-items: center;
-  // direction: rtl;
-  // flex-direction: row-reverse;
   gap: 12px;
 }
 
@@ -58,6 +65,9 @@
   line-height: 20px;
   text-align: center;
   color: #292929;
+  display: flex;
+  margin-left: 10px;
+  min-width: 30px;
 }
 
 .zakaz__minus {

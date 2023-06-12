@@ -5,6 +5,7 @@ import login from "../imgs/Login.png";
 import korzina from "../imgs/Korzina.png";
 import language from "../imgs/Language.png";
 import profil from "../imgs/Profil.png";
+import miniprofil from "../imgs/Loginn.png";
 import { Link, NavLink } from "react-router-dom";
 import * as React from "react";
 import Box from "@mui/material/Box";
@@ -88,19 +89,23 @@ export function Header() {
                 </React.Fragment>
               ))}
             </div>
-            <Link to="/">
-              <img src={logo} className={style.headerLogo} alt="logo" />
-            </Link>
-            <Link to="map">
-            <img src={login} className={style.header__login} alt="login" />
-            </Link>
+            <div className={style.headerLogo}>
+              <Link to="/">
+                <img src={logo} alt="logo" />
+              </Link>
+            </div>
+            <div className={style.header__login}>
+              <Link to="map">
+                <img src={login} alt="login" />
+              </Link>
+            </div>
           </div>
           <div className={style.header__right}>
             <div className={style.header__korzina}>
               <Link to="/korzina">
                 <img
                   src={korzina}
-                  className={style.header__korzina}
+                  // className={style.header__korzina}
                   alt="korzina"
                 />
               </Link>
@@ -110,6 +115,9 @@ export function Header() {
             </div>
             <div className={style.header__profil}>
               <img src={profil} alt="profil" />
+            </div>
+            <div className={style.profill}>
+              <img src={miniprofil} alt="1455" />
             </div>
           </div>
         </div>

@@ -1,7 +1,5 @@
 .emptyKorzina {
-  // padding: 174px 445px 186px 445px;
   padding: 86px 445px 86px 445px;
-
 }
 
 .emptyKorzina__container {
@@ -14,6 +12,8 @@
   gap: 40px;
   max-width: 550px;
   min-height: 340px;
+  // min-width: 262px;
+  // min-height: 298px;
   background: #ffffff;
   border-radius: 12px;
 }
@@ -42,4 +42,6 @@
   padding: 16px 91px;
   background: #ec8d1e;
   border-radius: 33px;
+  min-width: 241px;
+  max-height: 48px;
 }

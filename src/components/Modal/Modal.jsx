@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { addOrder } from "../../Redux/ZuzuRedux";
+import css from "./Modal.module.scss";
 
-export default function ModalItem({ currentProduct, setOpen }) {
+export default function ModalItem({ currentProduct, setOpenModalId }) {
   const dispatch = useDispatch();
   const [count, setCount] = useState(1);
 
@@ -18,94 +19,6 @@ export default function ModalItem({ currentProduct, setOpen }) {
     setCount(count + 1);
   };
 
-  const style = {
-    // display: "flex",
-    // flexDiraction: "column",
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: 802,
-    height: 326,
-    bgcolor: "background.paper",
-    border: "2px solid #fafafa",
-    borderRadius: "12px",
-    p: 3,
-    outline: 1,
-  };
-
-  const main = {
-    width: 428,
-    height: 124,
-    marginLeft: "50px",
-  };
-
-  const sty = {
-    display: "flex",
-    alignItems: "center",
-    marginTop: "220px",
-    marginLeft: "-420px",
-    gap: "15px",
-  };
-
-  const styl = {
-    p: 2,
-    gap: "46px",
-    width: 260,
-    height: 48,
-    background: "#EC8D1E",
-    borderRadius: "100px",
-    cursor: "pointer",
-    color: "#FFFFFF",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  };
-
-  const minus = {
-    cursor: "pointer",
-    fontSize: "25px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: 48,
-    height: 48,
-    background: "#F5F5F5",
-    borderRadius: "100px",
-  };
-
-  const number = {
-    cursor: "pointer",
-    fontSize: "25px",
-  };
-
-  const plus = {
-    cursor: "pointer",
-    fontSize: "25px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: 48,
-    height: 48,
-    background: "#F5F5F5",
-    borderRadius: "100px",
-  };
-
-  const title = {
-    fontWeight: 700,
-    fontSize: "32px",
-    lineHeight: "40px",
-  };
-
-  const subtitle = {
-    width: 428,
-    height: 72,
-    fontWeight: 400,
-    fontSize: "18px",
-    lineHeight: "24px",
-    color: "#808080",
-  };
-
   const addToOrders = (price) => {
     const newOrder = {
       ...currentProduct,
@@ -114,40 +27,43 @@ export default function ModalItem({ currentProduct, setOpen }) {
       idi: "a" + Date.now(),
     };
     dispatch(addOrder(newOrder));
-    setOpen(false);
+    setOpenModalId(false);
   };
 
   return (
-    <Box sx={style}>
-      <div className="modal" key={currentProduct.idi}>
-        <Typography>{<img src={currentProduct.img} alt="abc" />}</Typography>
-        <Typography sx={main}>
-          <Typography sx={title} variant="p">
-            {currentProduct.name}
-          </Typography>
-          <br></br>
-          <br></br>
-          <Typography variant="p" sx={subtitle}>
-            {currentProduct.comment}
-          </Typography>
-        </Typography>
-        <Typography sx={sty}>
-          <Typography sx={minus} onClick={minusButton}>
-            -
-          </Typography>
-          <Typography sx={number}>{count}</Typography>
-          <Typography sx={plus} onClick={plusButton}>
-            +
-          </Typography>
-          <Typography
-            sx={styl}
-            className="totalPrice"
-            onClick={() => addToOrders(currentProduct.price)}
-          >
-            Добавить {currentProduct.price * count} сум
-          </Typography>
-        </Typography>
-      </div>
-    </Box>
+    <>
+      <Box className={css.style}>
+        <div className={css.modal} key={currentProduct.idi}>
+          <div className={css.modalImg}>
+            {<img src={currentProduct.image} alt="abc" />}
+          </div>
+          <div className={css.main}>
+            <div className={css.title} variant="p">
+              {currentProduct.title}
+            </div>
+            <br></br>
+            <br></br>
+            <div variant="p" className={css.subtitle}>
+              {currentProduct.description}
+            </div>
+            <div className={css.sty}>
+              <div className={css.minus} onClick={minusButton}>
+                -
+              </div>
+              <div className={css.number}>{count}</div>
+              <div className={css.plus} onClick={plusButton}>
+                +
+              </div>
+              <div
+                className={css.styl}
+                onClick={() => addToOrders(currentProduct.price)}
+              >
+                Добавить {Math.floor(currentProduct.price * count)} сум
+              </div>
+            </div>
+          </div>
+        </div>
+      </Box>
+    </>
   );
 }
